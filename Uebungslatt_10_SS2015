@@ -21,3 +21,81 @@ T2: R2(z) W2(z=z/1.5) W2(z=z-3)
 T3: R3(y) W3(y=y+5) R3(z) W3(z=z+1) R3(x) W3(x=x/2)
 T4: R4(x) W4(x=x/1.1)
 T5: R5(z) W5(z=z-5)
+
+
+
+Alteklausur
+Probeklausur_DBMS_01
+
+Aufgabe 1
+a)
+1.{PID}->{Nachname, Vorname}
+2.{AutoTypID}->{Hersteller, Bezeichnung}
+3.{Kennzeichen}->{...}
+4.{}->{}
+5.{}->{}
+6.{}->{}
+7.{}->{}
+8.{}->{}
+9.{}->{}
+10.{}->{}
+
+b)
+1. Normalform: 
+2. Normalform: 
+3. Normalform: 
+
+
+
+
+Aufgabe 3
+a)
+leere Menge zurückgeben
+
+
+
+
+Aufgabe 7
+R3(f) R4(e) W3(e) W4(h) R5(e) R1(g) R5(g) R2(f) R2(h) W1(g) W5(f) W1(e) W2(h)
+mit Preclaiming
+
+T1: R1(g) W1(g) W1(e)
+T2: R2(f) R2(h) W2(h)
+T3: R3(f) W3(e) 
+T4: R4(e) W4(h) 
+T5: R5(e) R5(g) W5(f)
+
+    Operation  |    e    |    f    |    g    |    h     |    1   |    2   |   3   
+    R3(f)      |    X3       S3R3U3    
+X   R4(e)      |    ⚡                                   |  R4(e)
+    W3(e)      |  W3U3                                  |
+    R4(e)      |  S4R4U4                          X4    |
+    W4(h)      |                                  W4U4  |
+    R5(e)      |  S5R5U5      X5        S5              |
+X   R1(g)      |                        ⚡               |  R1(g)
+    R5(g)      |                       R5U5             |
+    R1(g)      |    X1                 X1R1             |  
+X   R2(f)      |              ⚡                         |  R2(f)
+X   R2(h)      |              ⚡                         |  R2(f)    R2(h)
+    W1(g)      |                       W1U1             |  R2(f)    R2(h)
+    W5(f)      |             W5U5                       |  R2(f)    R2(h)
+    R2(f)      |             S2U2                 X2    |  R2(h)
+    R2(h)      |                                  R2    |
+    W1(e)      |  W1U1                                  |
+    W2(h)      |                                  w2u2  |
+
+R3(f)W3(e)R4(e)W4(h)R5(e)R5(g)R1(g)W1(g)W5(f)R2(f)R2(h)W1(e)W2(h)
+
+
+
+
+
+Augabe 4
+
+
+
+
+
+
+
+
