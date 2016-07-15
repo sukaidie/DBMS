@@ -7,6 +7,9 @@ force: Änderungen müssen bis Ende der Transaktion auf Sekundärspeicher -> kei
 Not force: Änderungen zu beliebigen Zeitpunkt auf Sekundärspeicher -> Redo
 
 
+
+Aufgabe 2:
+
 T1: R1(x) R1(y) W1(x=x+2)
 T2: R2(z) W2(z=z+3) W2(z=z*1.5)
 T3: R3(x) R3(y) W3(x=x*2) R3(z) W3(z=z-1) W3(y=y-5)
