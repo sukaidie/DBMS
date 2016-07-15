@@ -1,4 +1,4 @@
-# Übungsblatt 10 (SS 2015)
+# Übungsblatt 10 (SS2015)
 //15.07.16
 
 steal: Änderungen jederzeit auf Sekundärspeicher auch vor Transaktionsende -> Undo
