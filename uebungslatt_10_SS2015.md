@@ -1,0 +1,20 @@
+# Übungsblatt 10 (SS 2015)
+//15.07.16
+
+steal: Änderungen jederzeit auf Sekundärspeicher auch vor Transaktionsende -> Undo
+Not steal: Änderungen nicht vor Ende der Transaktion auf Sekundärspeicher -> kein Undo
+force: Änderungen müssen bis Ende der Transaktion auf Sekundärspeicher -> kein Redo
+Not force: Änderungen zu beliebigen Zeitpunkt auf Sekundärspeicher -> Redo
+
+
+T1: R1(x) R1(y) W1(x=x+2)
+T2: R2(z) W2(z=z+3) W2(z=z*1.5)
+T3: R3(x) R3(y) W3(x=x*2) R3(z) W3(z=z-1) W3(y=y-5)
+T4: R4(x) W4(x=x*1.1)
+T5: R5(z) W5(z=z+5)
+
+T1: R1(x) W1(x=x-2) R1(y)
+T2: R2(z) W2(z=z/1.5) W2(z=z-3)
+T3: R3(y) W3(y=y+5) R3(z) W3(z=z+1) R3(x) W3(x=x/2)
+T4: R4(x) W4(x=x/1.1)
+T5: R5(z) W5(z=z-5)
