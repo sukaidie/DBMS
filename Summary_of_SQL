@@ -1,0 +1,43 @@
+SQL考点总结
+  1.建表
+    creat table xx(
+      xx integer/varchar    primary key/unique/references xx,
+    )
+  2.建视图
+    creat view as xx
+      select
+      from
+      where xx is null
+  3.基本语句
+    *基本SFW
+    *extract(year from current_date)
+  4.求'数量die Anzahl der Kunden'同时满足其他条件'mehr als xx'
+    注意顺序 SFWGHO
+    select count(xx)
+    from xxxxxxxx
+    group by xx
+    having count(xxxx)>xx
+  5.找到满足'最大数量die meisten Kunden'的'地点ort'
+    select ort
+    from xxxxxxxx
+    group by ort
+    having count(*)>=all(
+      select count(*)
+      from xxxxxxxx
+      group by ort
+    )
+  6.更新表的内容'setzen xxxx ein'
+    update xxxx set xx=(
+      SFW
+    )
+  7.合并操作'mengenbasierte Operation'
+    SFW
+    intersect
+    SFW
+  8.命名及from里面内容的修改'Differenz der A und B'
+    select xx,A-B
+    from (select xx,xxx as A
+          FW)
+          natural join
+          (select xx,xxx as B
+          FW)
